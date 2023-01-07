@@ -1,0 +1,16 @@
+// choclate wrapper puzzle,with recursion
+// link -- https://www.geeksforgeeks.org/program-chocolate-wrapper-puzzle/
+public class Solution{
+    public static int chocRap(int choc,int wrap){
+        if(choc<wrap)
+          return 0;
+        int newchoc = choc/wrap;
+        return newchoc+chocRap(newchoc+choc%wrap, wrap);
+    }
+    public static void main(String args[]){
+        int money = 16, price = 2, wrap = 2;
+        int pack=money/price;
+        int ans=pack+ chocRap(pack,wrap);
+        System.out.println(ans);
+    }
+}
