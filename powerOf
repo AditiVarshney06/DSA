@@ -1,0 +1,10 @@
+public class MyClass {
+    public static int pow(int num,int power){
+        if(power==0)
+           return 1;
+       return pow(num,power-1)*num;
+    }
+    public static void main(String args[]) {
+      System.out.println(pow(2,3));
+    }
+}
