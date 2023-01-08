@@ -1,0 +1,11 @@
+// count given number length, 123=3;
+public class MyClass {
+    public static int sum(int num){
+        if(num<=9)
+          return 1;
+        return sum(num/10) +1;
+    }
+    public static void main(String args[]) {
+      System.out.println(sum(156632));
+    }
+}
