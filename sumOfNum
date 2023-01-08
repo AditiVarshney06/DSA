@@ -1,0 +1,12 @@
+// sum of given number, 123=6
+public class MyClass {
+    public static int sum(int num){
+        if(num<=9)
+            return num;
+        int ans=sum(num/10)+num%10;
+        return ans;
+    }
+    public static void main(String args[]) {
+      System.out.println(sum(132));
+    }
+}
