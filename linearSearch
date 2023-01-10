@@ -1,0 +1,16 @@
+// linear search
+public class Solution {
+    static int curr=0;
+    public static int sort(int[] arr,int target,int curr){
+        if(curr==arr.length-1)
+           return -1;
+        if(arr[curr]==target)
+           return curr;
+        return sort(arr,target,curr+1);
+           
+    }
+    public static void main(String args[]){
+        int arr[] = {1,2,15,2};
+        System.out.print(sort(arr,15,0));
+    }
+}
