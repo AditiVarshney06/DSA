@@ -1,0 +1,16 @@
+import java.util.*;
+public class MyClass {
+     static int ans=0;
+    public static int reverse(int num){
+        if(num ==0)
+           return ans;
+        int temp=num%10;
+        ans = ans*10 + temp;
+        reverse(num/10);
+        return ans;
+    }
+    
+    public static void main(String args[]) {
+       System.out.println(reverse(1234));
+    }
+}
