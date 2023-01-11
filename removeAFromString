@@ -1,0 +1,13 @@
+// remove element a from string
+public class MyClass {
+    public static String reverse(String str,String curr,int i){
+        if(i==str.length())
+           return curr;
+        if(str.charAt(i)!='a')
+           curr+=str.charAt(i);
+       return reverse(str,curr,i+1);
+    }
+    public static void main(String args[]) {
+      System.out.print(reverse("aditiai","",0));
+    }
+}
