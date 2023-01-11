@@ -1,0 +1,28 @@
+class Solution
+{
+    void func(Stack<Integer>stack,int N,int count){
+        if(count== (N/2)){
+            stack.pop();
+            return ;
+        }
+        int num=stack.pop();
+        func(stack,N,count+1);
+        
+        stack.push(num);
+    }
+    
+    public void deleteMid(Stack<Integer>stack,int N){
+        int count=0;
+        // func(stack,N,count);
+        // bruteforce or basic
+        ArrayList<Integer> list = new ArrayList<>();
+     for(int i=0;i<=stack.size();i++){
+         list.add(stack.pop());
+     }
+     int n2=stack.size();
+     for(int i=list.size()-2;i>=0;i--){
+         stack.push(list.get(i));
+     }
+    } 
+}
+
