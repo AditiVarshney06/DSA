@@ -1,0 +1,21 @@
+https://practice.geeksforgeeks.org/problems/number-of-occurrence2259/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article
+
+int first(int arr[], int n,int x){
+        int s=0;
+        int e=n-1;
+        int mid=s+ (e-s)/2;
+        int f=-1;
+        while(s<=e){
+            if(arr[mid]==x)
+            {
+                f=mid;
+                e=mid-1;
+            }
+            else if(arr[mid]>x)
+               end=mid-1;
+            else
+               start=mid+1;
+            mid = s+ (e-s)/2;
+        }
+    return f;
+    }
