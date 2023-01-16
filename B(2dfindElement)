@@ -1,1 +1,24 @@
 //linear search--- O(mxn)
+//binary search
+public class MyClass {
+    public static void main(String args[]) {
+      int arr[][]={{10,20,30,40},{15,25,35,45},{27,29,27,48},{32,33,39,50}};
+      int row=arr.length;
+      int col=arr[0].length;
+      int i=0,j=col-1;
+      int tar=40;
+      while((i>=0 && i<row)&&(j>=0 && j<col)){
+          if(arr[i][j]==tar)
+              {
+                  System.out.print(i+" "+j);
+                  break;
+              }
+          else if(arr[i][j]>tar)
+              j--;
+          else
+             i++;
+      }
+    //   return -1, if element is not present;
+      
+    }
+}
