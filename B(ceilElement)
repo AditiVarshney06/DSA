@@ -1,0 +1,23 @@
+https://leetcode.com/problems/find-smallest-letter-greater-than-target/submissions/879344879/
+
+class Solution {
+    public char nextGreatestLetter(char[] letters, char target) {
+        int value=Integer.valueOf(target);
+        int n=letters.length;
+        int start=0,end=n-1;
+        int mid=start+(end-start)/2;
+        char ans=letters[0];
+        while(start<=end){
+            char ch=letters[mid];
+            int chValue=Integer.valueOf(ch);
+            if(chValue>value){
+                ans=ch;
+                end=mid-1;
+            }
+            else
+              start=mid+1;
+          mid=start+(end-start)/2;
+        }
+        return ans;
+    }
+}
