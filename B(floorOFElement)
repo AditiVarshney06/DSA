@@ -1,0 +1,30 @@
+https://practice.geeksforgeeks.org/problems/floor-in-a-sorted-array-1587115620/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article
+
+
+
+class Solution{
+    
+    // Function to find floor of x
+    // arr: input array
+    // n is the size of array
+    static int findFloor(long arr[], int n, long x)
+    {
+        int start=0;
+        int end=n-1;
+        int mid=start+ (end-start)/2;
+        int ans=-1;
+        while(start<=end){
+            if(arr[mid]==x)
+               return mid;
+            else if(arr[mid]<x){
+                ans=mid;
+                start=mid+1;
+            }
+            else
+               end=mid-1;
+            mid=start+ (end-start)/2;
+        }
+        return ans;
+    }
+    
+}
