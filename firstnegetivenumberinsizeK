@@ -1,0 +1,29 @@
+First negative integer in every window of size k
+
+class Compute {
+    
+    public long[] printFirstNegativeInteger(long A[], int N, int K)
+    {
+        long ans[] = new long[N-K+1];
+        int a=0;
+       Queue<Long> q = new LinkedList<>();
+       for(int i=0;i<K-1;i++){
+           if(A[i]<0)
+             q.add(A[i]);
+       }
+       for(int i=K-1;i<N;i++){
+           if(A[i]<0)
+             q.add(A[i]);
+           if(!(q.isEmpty())){
+               ans[a++]=q.peek();
+               if(q.peek()==A[i-K+1])
+                  q.remove();
+           }
+           else
+              ans[a++]=0;
+       }
+       return ans;
+        
+        
+    }
+}
